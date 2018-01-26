@@ -63,9 +63,14 @@
 
     ===================== */
 
-    L.marker([0, 0]).addTo(map);
-    L.marker([0, 0]).addTo(map);
-    L.marker([0, 0]).addTo(map);
+    var marker1 = [39.9477, -75.1681, "Monks Cafe"]
+    var marker2 = [39.9508, -75.1739, "Almaz Cafe"]
+    var marker3 = [39.9717, -75.1351, "WM Mulherin's Sons"]
+    var restaurantData = [marker1, marker2, marker3]
+
+    for(var i = 0; i < 3; i++){
+    L.marker(restaurantData[i]).addTo(map).bindPopup(restaurantData[i][2]);}
+
 
     /* =====================
 
